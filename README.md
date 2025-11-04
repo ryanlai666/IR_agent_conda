@@ -14,6 +14,8 @@ This project implements a multi-agent workflow using LangGraph to automate compu
 
 This framework is built to be a modular and extensible platform for automating repetitive computational tasks in materials science and chemistry.
 
+![langgraph_flowchart](langgraph_structures_v3.png)
+
 ## 2. CORE FEATURES
 
 * Natural Language Interface: Control complex simulations with simple text prompts.
