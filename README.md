@@ -365,6 +365,9 @@ Example Prompts:
 (if set `Take_task_from_user`=`False` in `test_endtoend.py` )
 initial_task = "XXXXXX" in main function will be use as argument
 
+![Exampel of slab with adsorbate](Usage1.gif)
+
+![Exampel of pure molecule](Usage2.gif)
 
 ### 📈 Calculator Performance Summary: Single-Core Benchmark. 
 
