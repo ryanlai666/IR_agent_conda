@@ -365,10 +365,12 @@ Example Prompts:
 
 
 
-- Example of slab with adsorbate 
+- Example of slab with adsorbate:
+  
 ![Example of slab with adsorbate](Usage1.gif)
 
-- Example of pure molecule
+- Example of pure molecule:
+  
 ![Example of pure molecule](Usage2.gif)
 
 ###  Notice:
@@ -408,7 +410,12 @@ The agent will stream its progress to the console. Final results, including plot
 
 * [system_name]_structures.png: A comparison of the initial and final atomic structures.
 * [system_name]_ir.png: The calculated IR spectrum.
+* [system_name]_ir.png: The calculated IR spectrum.
 * Log files and trajectories: (e.g., `.log`, `.traj`) are saved in the root directory for debugging shown in root directory.
+
+- Example of [system_name]_structures.png :
+
+![Example of pure molecule](result/N2_on_Au_fcc_111_fast_structures.png)
 
 ---
 
