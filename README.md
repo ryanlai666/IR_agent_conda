@@ -409,7 +409,7 @@ Output
 The agent will stream its progress to the console. Final results, including plots and trajectories, will be saved in the `results/` directory.
 
 * [system_name]_structures.png: A comparison of the initial and final atomic structures.
-* [system_name]_ir.png: The calculated IR spectrum.
+* [system_name]_ir.png: The calculated IR spectrum. (current result should be quite inaccurate (fast(EMT), dftb+, xtb result.))
 * [system_name]_report.txt: summary from AI agent.
 * Log files and trajectories: (e.g., `.log`, `.traj`) are saved in the root directory for debugging shown in root directory.
 
