@@ -1,0 +1,1 @@
+A mock IR simulation for H2O on Au, performed using the dftb+ calculator, yielded four distinct vibrational frequencies. The calculated peak positions are observed at 601.7 cm⁻¹, 1396.5 cm⁻¹, 2657.6 cm⁻¹, and 8810.4 cm⁻¹. These values represent the vibrational modes identified by the simulation for the specified system and computational method.

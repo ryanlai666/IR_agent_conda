@@ -1,0 +1,1 @@
+A mock IR simulation for NH3 on Au, performed using the dftb+ calculator, identified six distinct vibrational modes. The calculated peak frequencies are observed at 289.8 cm⁻¹, 332.3 cm⁻¹, 836.8 cm⁻¹, 1035.2 cm⁻¹, 1780.2 cm⁻¹, and 1846.8 cm⁻¹.
