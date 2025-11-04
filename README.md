@@ -358,6 +358,7 @@ Example Prompts:
 ## slab with adsorbate
 * "Run a fast IR spectrum simulation for water on Au(111)"
 * "Get the optimized structure and IR for water on Au(100) using the dftb+ calculator"  ### take ~ 10 mins
+* "Get the optimized structure and NH3 for NH3 on Au(111) using the dftb+ calculator"  ### take ~ 15 mins 
 * "Get the optimized structure and IR for N2 on Au(100) using the dftb+ calculator"     ### take ~ few mins
 
 ## pure molecule
@@ -415,13 +416,31 @@ The agent will stream its progress to the console. Final results, including plot
 * Log files and trajectories: (e.g., `.log`, `.traj`) are saved in the root directory for debugging shown in root directory.
 * [system_name]_slab.xyz : (e.g., `.xyz`) optimized structure  are saved in the root directory for further examination or usage.
 
-- Example of [system_name]_structures.png :
+
+- #### N2_on_Au_fcc_111_fast(EMT)
+- Example of EMT(fast) [system_name]_structures.png :
 
 ![Example of pure molecule](results/N2_on_Au_fcc_111_fast_structures.png)
 
-- Example of [system_name]_ir.png :
+- Example of EMT(fast) [system_name]_ir.png :
 
 ![Example of pure molecule](results/N2_on_Au_fcc_111_by_fast_ir.png)
+
+
+- #### NH3_on_Au_fcc_111_dftb+
+- Example of dftb+ [system_name]_structures.png :
+![Example of pure molecule](results/NH3_on_Au_fcc_111_dftb+_structures.png)
+
+- Example of dftb+ [system_name]_ir.png :
+![Example of pure molecule](results/NH3_on_Au_fcc_111_by_dftb+_ir.png)
+
+
+- #### H2O_on_Au_fcc_100_dftb+
+- Example of dftb+ [system_name]_structures.png :
+![Example of pure molecule](results/H2O_on_Au_fcc_100_dftb+_structures.png)
+
+- Example of dftb+ [system_name]_ir.png :
+![Example of pure molecule](results/H2O_on_Au_fcc_100_by_dftb+_ir.png)
 
 ---
 
