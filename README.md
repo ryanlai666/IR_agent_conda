@@ -14,7 +14,7 @@ This project implements a multi-agent workflow using LangGraph to automate compu
 
 This framework is built to be a modular and extensible platform for automating repetitive computational tasks in materials science and chemistry.
 
-![langgraph_flowchart](langgraph_structures_v3.png){height=400}
+![langgraph_flowchart](langgraph_structures_v3.png)
 
 ## 2. CORE FEATURES
 
@@ -422,27 +422,27 @@ The agent will stream its progress to the console. Final results, including plot
 - #### N2_on_Au_fcc_111_fast(EMT)
 - Example of EMT(fast) [system_name]_structures.png :
 
-![Example of pure molecule](results/N2_on_Au_fcc_111_fast_structures.png){width=200} 
+![Example of pure molecule](results/N2_on_Au_fcc_111_fast_structures.png)
 
 - Example of EMT(fast) [system_name]_ir.png :
 
-![Example of pure molecule](results/N2_on_Au_fcc_111_by_fast_ir.png){width=200}
+![Example of pure molecule](results/N2_on_Au_fcc_111_by_fast_ir.png)
 
 
 - #### NH3_on_Au_fcc_111_dftb+
 - Example of dftb+ [system_name]_structures.png :
-![Example of pure molecule](results/NH3_on_Au_fcc_111_dftb+_structures.png){width=200}
+![Example of pure molecule](results/NH3_on_Au_fcc_111_dftb+_structures.png)
 
 - Example of dftb+ [system_name]_ir.png :
-![Example of pure molecule](results/NH3_on_Au_fcc_111_by_dftb+_ir.png){width=200}
+![Example of pure molecule](results/NH3_on_Au_fcc_111_by_dftb+_ir.png)
 
 
 - #### H2O_on_Au_fcc_100_dftb+
 - Example of dftb+ [system_name]_structures.png :
-![Example of pure molecule](results/H2O_on_Au_fcc_100_dftb+_structures.png){width=200}
+![Example of pure molecule](results/H2O_on_Au_fcc_100_dftb+_structures.png)
 
 - Example of dftb+ [system_name]_ir.png :
-![Example of pure molecule](results/H2O_on_Au_fcc_100_by_dftb+_ir.png){width=200}
+![Example of pure molecule](results/H2O_on_Au_fcc_100_by_dftb+_ir.png)
 
 ---
 
