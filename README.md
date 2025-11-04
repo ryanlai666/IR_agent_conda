@@ -365,11 +365,11 @@ Example Prompts:
 
 
 
-Exampel of slab with adsorbate 
-![Exampel of slab with adsorbate](Usage1.gif)
+- Example of slab with adsorbate 
+![Example of slab with adsorbate](Usage1.gif)
 
-Exampel of pure molecule
-![Exampel of pure molecule](Usage2.gif)
+- Example of pure molecule
+![Example of pure molecule](Usage2.gif)
 
 ###  Notice:
 
