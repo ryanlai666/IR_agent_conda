@@ -410,12 +410,16 @@ The agent will stream its progress to the console. Final results, including plot
 
 * [system_name]_structures.png: A comparison of the initial and final atomic structures.
 * [system_name]_ir.png: The calculated IR spectrum.
-* [system_name]_ir.png: The calculated IR spectrum.
+* [system_name]_report.txt: summary from AI agent.
 * Log files and trajectories: (e.g., `.log`, `.traj`) are saved in the root directory for debugging shown in root directory.
 
 - Example of [system_name]_structures.png :
 
 ![Example of pure molecule](result/N2_on_Au_fcc_111_fast_structures.png)
+
+- Example of [system_name]_ir.png :
+
+![Example of pure molecule](result/N2_on_Au_fcc_111_by_fast_ir.png)
 
 ---
 
