@@ -357,7 +357,8 @@ Example Prompts:
 ```bash
 ## slab with adsorbate
 * "Run a fast IR spectrum simulation for water on Au(111)"
-* "Get the optimized structure and IR for N2 on Au(100) using the dftb+ calculator"
+* "Get the optimized structure and IR for water on Au(100) using the dftb+ calculator"  ### take ~ 10 mins
+* "Get the optimized structure and IR for N2 on Au(100) using the dftb+ calculator"     ### take ~ few mins
 
 ## pure molecule
 * "Calculate the frequencies for an isolated H2O molecule using xtb"
