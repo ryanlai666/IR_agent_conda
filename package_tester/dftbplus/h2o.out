@@ -1,0 +1,90 @@
+|===============================================================================
+|
+|  DFTB+ release 24.1
+|
+|  Copyright (C) 2006 - 2024  DFTB+ developers group
+|
+|===============================================================================
+|
+|  When publishing results obtained with DFTB+, please cite the following
+|  reference:
+|
+|  * DFTB+, a software package for efficient approximate density functional
+|    theory based atomistic simulations, J. Chem. Phys. 152, 124101 (2020).
+|    [doi: 10.1063/1.5143190]
+|
+|  You should also cite additional publications crediting the parametrization
+|  data you use. Please consult the documentation of the SK-files for the
+|  references.
+|
+|===============================================================================
+
+Reading input file 'dftb_in.hsd'
+Parser version: 14
+
+--------------------------------------------------------------------------------
+***  Converting input from parser version  1 to parser version 14 ...
+WARNING!
+-> Adding legacy step size for finite difference differentiation
+Path: dftbplusinput/Hamiltonian/DFTB/Differentiation
+
+WARNING!
+-> Keyword renamed to 'PrintForces'.
+Path: dftbplusinput/Analysis/CalculateForces
+Line: 6-6 (File: dftb_in.hsd)
+
+***  Done.
+
+Reading SK-files:
+/scratch/user/yuhsuanho/IR_agent_conda/auorgap-1.1.0/skfiles/O-O.skf
+/scratch/user/yuhsuanho/IR_agent_conda/auorgap-1.1.0/skfiles/O-H.skf
+/scratch/user/yuhsuanho/IR_agent_conda/auorgap-1.1.0/skfiles/H-H.skf
+Done.
+
+
+Processed input in HSD format written to 'dftb_pin.hsd'
+
+Starting initialization...
+--------------------------------------------------------------------------------
+OpenMP threads:              1
+Chosen random seed:          117793195
+Current stacksize:           8 [Mb] (recommended: unlimited)
+WARNING!
+-> Current stacksize not set to unlimited or hard limit, which might cause
+   random crashes (e.g. segmentation faults). It is advised to unlimit the
+   stacksize by issuing 'ulimit -s unlimited' (Linux) or setting it to the 
+   hard limit by 'ulimit -s hard' (Mac) in advance.
+Mode:                        Static calculation
+Self consistent charges:     No
+Spin polarisation:           No
+Nr. of up electrons:             4.000000
+Nr. of down electrons:           4.000000
+Periodic boundaries:         No
+Electronic solver:           Relatively robust
+Electronic temperature:              0.100000E-07 H      0.272114E-06 eV
+Included shells:             O:  s, p
+                             H:  s
+Extra options:
+                             Mulliken analysis
+                             Force calculation
+Force type                   original
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 0
+
+
+Total Energy:                       -4.1082029251 H         -111.7899 eV
+Extrapolated to 0K:                 -4.1082029251 H         -111.7899 eV
+Total Mermin free energy:           -4.1082029251 H         -111.7899 eV
+Force related energy:               -4.1082029251 H         -111.7899 eV
+
+
+--------------------------------------------------------------------------------
+DFTB+ running times                          cpu [s]             wall clock [s]
+--------------------------------------------------------------------------------
+Global initialisation                  +       0.01 ( 83.3%)       0.01 ( 76.9%)
+--------------------------------------------------------------------------------
+Missing                                +       0.00 ( 16.7%)       0.00 ( 23.1%)
+Total                                  =       0.01 (100.0%)       0.01 (100.0%)
+--------------------------------------------------------------------------------

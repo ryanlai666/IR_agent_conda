@@ -1,0 +1,26 @@
+title "nwchem"
+
+permanent_dir /scratch/user/yuhsuanho/IR_agent_conda/package_tester/nwchem
+
+scratch_dir /scratch/user/yuhsuanho/IR_agent_conda/package_tester/nwchem
+
+start nwchem
+
+
+
+geometry units angstrom nocenter noautosym noautoz
+  H  0.0000000000000000e+00 0.0000000000000000e+00 0.0000000000000000e+00
+  H  0.0000000000000000e+00 0.0000000000000000e+00 6.9999999999999996e-01
+end
+
+basis noprint
+   * library 3-21G
+end
+
+dft
+  xc xpbe96 cpbe96
+  mult 1
+end
+
+task dft gradient
+

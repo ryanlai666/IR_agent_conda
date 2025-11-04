@@ -1,0 +1,27 @@
+title "nwchem"
+
+permanent_dir /scratch/user/yuhsuanho/IR_agent_conda/package_tester/NWChem/calc/nwchem
+
+scratch_dir /scratch/user/yuhsuanho/IR_agent_conda/package_tester/NWChem/calc/nwchem
+
+start nwchem
+
+
+
+geometry units angstrom nocenter noautosym noautoz
+  H  0.0000000000000000e+00 0.0000000000000000e+00 -2.1376249967786792e-02
+  H  0.0000000000000000e+00 0.0000000000000000e+00 7.2137624996778682e-01
+end
+
+basis noprint
+   * library 6-31+G*
+end
+
+dft
+  maxiter 2000
+  xc B3LYP
+  mult 1
+end
+
+task dft gradient
+

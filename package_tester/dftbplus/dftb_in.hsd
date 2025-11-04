@@ -1,0 +1,25 @@
+Geometry = GenFormat { 
+    <<< "geo_end.gen" 
+} 
+ 
+Analysis { 
+   CalculateForces = Yes 
+   } 
+Hamiltonian = DFTB{ 
+   MaxAngularMomentum = { 
+      H = s 
+      O = p 
+   } 
+   SlaterKosterFiles = Type2FileNames{ 
+      Prefix = /scratch/user/yuhsuanho/IR_agent_conda/auorgap-1.1.0/skfiles/ 
+      Separator = "-" 
+      Suffix = ".skf" 
+      } 
+   } 
+Options { 
+   WriteResultsTag = Yes 
+   } 
+ParserOptions { 
+   IgnoreUnprocessedNodes = Yes 
+   ParserVersion = 1 
+} 
