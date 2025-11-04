@@ -1,0 +1,1 @@
+The mock IR simulation for N2 on Au, performed with a 'fast' calculator, identified two distinct vibrational modes. These modes are observed at frequencies of 932.0 cm⁻¹ and 8243.4 cm⁻¹.

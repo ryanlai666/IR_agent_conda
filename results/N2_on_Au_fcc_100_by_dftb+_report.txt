@@ -1,0 +1,1 @@
+The mock IR simulation for N2 on Au, performed using the dftb+ calculator, identified two distinct vibrational frequencies. These peaks are located at 932.0 cm⁻¹ and 8243.4 cm⁻¹, representing the calculated vibrational modes for the specified system under the given computational parameters.
