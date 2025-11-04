@@ -1,0 +1,1 @@
+The mock IR simulation for N2 on Au, performed using the dftb+ calculator, identified two distinct vibrational modes. These modes are observed at 932.0 cm⁻¹ and 8243.4 cm⁻¹, indicating one relatively low-frequency mode and another significantly higher-frequency mode within the calculated spectrum.
