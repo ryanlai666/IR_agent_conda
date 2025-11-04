@@ -416,11 +416,11 @@ The agent will stream its progress to the console. Final results, including plot
 
 - Example of [system_name]_structures.png :
 
-![Example of pure molecule](result/N2_on_Au_fcc_111_fast_structures.png)
+![Example of pure molecule](results/N2_on_Au_fcc_111_fast_structures.png)
 
 - Example of [system_name]_ir.png :
 
-![Example of pure molecule](result/N2_on_Au_fcc_111_by_fast_ir.png)
+![Example of pure molecule](results/N2_on_Au_fcc_111_by_fast_ir.png)
 
 ---
 
