@@ -363,7 +363,12 @@ Example Prompts:
 * "Calculate the frequencies for an isolated H2O molecule using xtb"
 ```
 
+
+
+Exampel of slab with adsorbate 
 ![Exampel of slab with adsorbate](Usage1.gif)
+
+Exampel of pure molecule
 ![Exampel of pure molecule](Usage2.gif)
 
 ###  Notice:
