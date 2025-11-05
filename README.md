@@ -258,11 +258,12 @@ For compatibility, also the old variable can be used, and the resulting command 
 Please check https://ase-lib.org/ase/calculators/dftb.html for more details on its enviorments setup.
 
 For current DFTB parameter used. please change the DFTB+ prefex in your .vimrc to export the correct parameters path.
+3ob-3.1.0, auorgap zips are included.
 ```bash
 export DFTB_PREFIX= YOUR_PARAMETERS_PATH/IR_agent_conda/3ob-3.1.0/skfiles/
 ```
 For this adsorption project, these two paraneters set are already included in the root diretories, please exported the needed parameters
-- auorgap : includes Au - Au,H,C,N,O,S,P (gold-thiolate compounds + extension of auorg with P) 
+- auorgap : includes Au - Au,H,C,N,O,S,P (gold-thiolate compounds + extension of auorg with P)  ## current dftb+ results
 
 - 3ob : includes Br-C-Ca-Cl-F-H-I-K-Mg-N-Na-O-P-S-Zn (DFTB3 files for bio and organic molecules) 
 
