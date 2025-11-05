@@ -129,8 +129,8 @@ Prerequisites
 
 
 ### Clone this repo
-    git clone [YOUR_REPO_URL]
-    cd [YOUR_REPO_NAME]
+    git clone https://github.com/ryanlai666/IR_agent_conda [This_REPO_URL]
+    cd IR_agent_conda
 
 
 ###  Create the conda environment
