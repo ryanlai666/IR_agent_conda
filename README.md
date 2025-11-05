@@ -206,15 +206,15 @@ The Supported calculators of ASE could be checked in following link: [Supported 
 
 However, most of packages listed are not easily accessible through conda install, and very few supported PBC system. Therefoere, this project merely includes:
 
-**1. EMT** : EMT is built-in with ASE. No installation is needed.  (bad performance)
-
-**2. DFTB+ (Recommended)**: We recommend installing via `mamba` for easier dependency resolution.
-
-**3. GPAW**: Install via `conda-forge`
-
-**4. xTB (For Molecules Only)**: Note: The `xtb_ase` wrapper does not support Periodic Boundary Conditions (PBC) and will fail for slab systems. It is suitable for isolated molecule calculations.
-
-**5. NWChem** Install via `micromamba`:
+    **1. EMT** : EMT is built-in with ASE. No installation is needed.  (bad performance)
+    
+    **2. DFTB+ (Recommended)**: We recommend installing via `mamba` for easier dependency resolution.
+    
+    **3. GPAW**: Install via `conda-forge`
+    
+    **4. xTB (For Molecules Only)**: Note: The `xtb_ase` wrapper does not support Periodic Boundary Conditions (PBC) and will fail for slab systems. It is suitable for isolated molecule calculations.
+    
+    **5. NWChem** Install via `micromamba`:
 
 
 **6. tblite**  (version contradict with stable DFTB+ version, so skipped for now)
