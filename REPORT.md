@@ -17,6 +17,8 @@ Please check section 3 in `README.md` "3. HOW IT WORKS: AGENT ARCHITECTURE"
 
 For the detailed usage workflow, please also take look at "5. USAGE"
 
+The section C of this file also elborate on the design process based on calculators and differnt system.
+
 ## B. Method choice & rationale (e.g., DFT vs DFTB vs MLIP)
 
 Both DFT and DFTB are connected to this graphs, while MILP are not included due to the time limitation. While UMA from META / MACE should be included as comparsion. Please check the "2. CORE FEATURES" and "Calculator Performance Summary: Single-Core Benchmark." from "5. USAGE" for further details.
