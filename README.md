@@ -402,7 +402,7 @@ The following table summarizes the approximate performance of implemented calcul
 ### Important Notes and Limitations
 
 * **Coarse Results:** This table provides only a very coarse idea of performance. The VASP results are based on past experience, not this specific benchmark.
-* **Rough IR Results** Current example results provides coarse vibration calculations, which did not include the dipole moment induced IR active/inactive on Intensities. Therefore, all vibrations mode will be considered as IR.
+* **Rough IR Results:** Current example results provides coarse vibration calculations, which did not include the dipole moment induced IR active/inactive on Intensities. Therefore, all vibrations mode will be considered as IR.
 * **No Parallel Processing:** The current DFT/DFTB package installations do not include MPI/OpenMP support, or it is not enabled in the ASE calculator settings.
 * **Performance Bottleneck:** As a result of being limited to a single core, completing calculations with computationally demanding packages like **GPAW** and **NWChem** is very difficult.
 * **xTB Limitations:** The current `xtb` calculator implementation only supports molecular calculations (it does not support Periodic Boundary Conditions, or PBC, for slabs).
