@@ -7,8 +7,7 @@ from ase.build import (
     bcc100, bcc110, bcc111,
     hcp0001, hcp10m10
 )
-from ase.build import add_adsorbate
-
+from ase.build import add_adsorbate, rotate
 
 from ase.collections import g2
 from ase.build import molecule
@@ -17,6 +16,10 @@ from ase.geometry import get_layers
 from ase.calculators.emt import EMT
 from ase.calculators.vasp import Vasp
 import ase
+
+import shutil
+from datetime import datetime
+
 
 # <<< MODIFIED: Added for calculator type hinting with a fallback
 try:
@@ -201,7 +204,7 @@ def _get_calculator(preset: str = 'fast', mode='opt') -> Calculator:
                 Hamiltonian_MaxAngularMomentum_Au='d',
                 Hamiltonian_MaxAngularMomentum_S='d',
                 Hamiltonian_MaxAngularMomentum_P='d',
-                
+                Hamiltonian_MaxSCCIterations=500 
                 ) 
             if mode=='freq':  
                calc = Dftb(
@@ -217,6 +220,7 @@ def _get_calculator(preset: str = 'fast', mode='opt') -> Calculator:
                 Hamiltonian_MaxAngularMomentum_Au='d',
                 Hamiltonian_MaxAngularMomentum_S='d',
                 Hamiltonian_MaxAngularMomentum_P='d',
+                Hamiltonian_MaxSCCIterations=1000
                 ) 
                 #calc = GPAW(mode='lcao', basis='dzp', xc='LDA', kpts=(1,1,1), symmetry='off')  ## lda for faster calculation
 
@@ -379,7 +383,7 @@ def setup_slab_tool(
 def setup_adsorbate_tool(
     slab: Atoms,
     adsorbate_formula: str = 'H2O',
-    adsorbate_height: float = 1.8
+    adsorbate_height: float = 2.2
 ) -> Atoms:
     """
     Places an adsorbate (e.g., water) on top existed metal slab using ASE.
@@ -389,7 +393,10 @@ def setup_adsorbate_tool(
     adsorbate = molecule(adsorbate_formula)
     
     slab.pbc = (True, True, True)
-    
+
+    ## rotate the water
+    adsorbate.rotate(180, 'x', center='COM')
+    #atoms.rotate(180, 'x', center='COM')
     #adsorbate = Atoms(adsorbate_formula, positions=[ (0, 0.76, 0.59),  (0, -0.76, 0.59),(0, 0, 0)])
 
     # 2. Add the adsorbate to the slab
@@ -521,6 +528,17 @@ def run_opt_freq_tool(
     
     # <<< MODIFIED: Use Infrared instead of Vibrations to get intensities
     
+   
+   ## will remove each vibration information of last calculations for now
+    vib_name = 'vib' # This is the default name
+    if os.path.exists(vib_name):
+        
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        archive_name = f"{vib_name}_archive_{timestamp}"
+        
+        print(f"[Tool] Stale directory '{vib_name}' found. Renaming to '{archive_name}'.")
+        os.rename(vib_name, archive_name)
+
 
     # the ASE implement IR rquire dipole moment calucaltions
     # https://ase-lib.org/ase/vibrations/infrared.html
@@ -560,22 +578,21 @@ def run_opt_freq_tool(
         print(f"[Tool] Vibrational analysis complete.")
         ## start to print the summary
         vib.summary
+        
+        
         #vib_data = VibrationsData(atoms, hessian, VibrationsData.indices_from_mask(water_indices))
         #print(vib_data)
         # Get the VibrationsData object which stores the results
-        vib_data = vib.get_vibrations()
+        if 0:  ## if need hessian
+            vib_data = vib.get_vibrations()
 
-
-
-
-
-        # Extract the Hessian matrix
-        # get_hessian() returns a (N, 3, N, 3) array
-        hessian_4d = vib_data.get_hessian()
-        
-        # get_hessian_2d() returns a (3N, 3N) array, which is often more useful
-        hessian_2d = vib_data.get_hessian_2d()
-        print("hessian_2d:\n",hessian_2d )
+            # Extract the Hessian matrix
+            # get_hessian() returns a (N, 3, N, 3) array
+            hessian_4d = vib_data.get_hessian()
+            
+            # get_hessian_2d() returns a (3N, 3N) array, which is often more useful
+            hessian_2d = vib_data.get_hessian_2d()
+            print("hessian_2d:\n",hessian_2d )
         
         #hessian = atoms.calc.get_hessian(atoms=atoms)
 

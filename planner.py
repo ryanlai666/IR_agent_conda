@@ -251,7 +251,7 @@ def calculation_node(state: SimulationState):
     opt_atoms, vib_run = sim_tools.run_opt_freq_tool.func(
         atoms=atoms.copy(),
         calculator_preset=calculator_preset,
-        optimizer_fmax=0.01,
+        optimizer_fmax=0.05, ## this shoudl be tight,but here we use looser criteria for testrun
         vib_delta=0.01,
         adsorbate_formula=adsorbate_formula,
         system_name=state["system_str"]+'_opt_freq'
