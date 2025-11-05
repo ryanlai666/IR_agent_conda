@@ -129,11 +129,13 @@ Prerequisites
 
 
 ### Clone this repo
-    git clone https://github.com/ryanlai666/IR_agent_conda [This_REPO_URL]
+    git clone https://github.com/ryanlai666/IR_agent_conda.git [This_REPO_URL]
     cd IR_agent_conda
 
 
 ###  Create the conda environment
+
+It is recommended to set up a conda environment and installing dependency through conda-forge.
 
 - Anaconda version used in this project is `Anaconda3/2024.02-1` 
 
