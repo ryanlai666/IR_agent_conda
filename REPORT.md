@@ -41,14 +41,10 @@ Therefore, most of the result I presents are based on merely based on DFTB+ or E
 
 | Feature | **DFT (Density Functional Theory)** | **DFTB (Density-Functional Tight-Binding)** | **MLIP (Machine Learning Interatomic Potential)** |
 | :--- | :--- | :--- | :--- |
-| **Underlying Principle** | Solves approximate forms of the quantum mechanical electronic Schrödinger equation. | An approximate, semi-empirical version of DFT based on a minimal atomic orbital basis set and pre-calculated parameters. | An empirical potential (like classical force fields) where the interaction function is a flexible machine-learning model (e.g., neural network) trained on *ab initio* data. |
-| **Example Calculators** | VASP, GPAW, NWChem, Quantum ESPRESSO | DFTB+, GFN1-xTB (via `tblite`), GFN2-xTB (via `xtb`) | Nequip, MACE, DeepMD, ANI (Note: Requires a pre-trained model for the specific chemical system). |
-| **Typical Accuracy** | **High.** Considered the "gold standard" for chemical accuracy in solid-state and surface science (with appropriate functional). | **Medium to Low.** Good for structures and qualitative trends. Less reliable for energies, charge transfer, and non-covalent interactions unless parameterized for them. | **High to Very High.** Can *reproduce the accuracy of the training data* (e.g., DFT). Accuracy is entirely dependent on the quality and completeness of the training set. |
-| **Computational Cost** | **Very High.** Scales poorly (e.g., $O(N^3)$) with system size. Vibrational calculations are extremely demanding. | **Fast.** Scales much better with system size. Significantly (100-1000x+) faster than DFT. | **Very Fast.** Speed is comparable to or faster than DFTB, often approaching classical potentials. Offers *DFT-level accuracy at near-classical speed*. |
-| **Pros** | • Highly accurate & predictive.<br>• General-purpose; no system-specific training needed (beyond choosing a functional).<br>• Correctly describes quantum effects like bond breaking/forming and charge transfer. | • Excellent balance of speed and *reasonable* quantum mechanics.<br>• Good for pre-optimization, high-throughput screening, and large systems (1000s of atoms). | • *Potential* for DFT or higher accuracy.<br>• Extremely fast, enabling large-scale molecular dynamics (MD) or massive system sizes for frequency calculations. |
-| **Cons / Limitations** | • Extremely slow and computationally expensive.<br>• Limited to smaller systems (typically <1000 atoms) and short timescales. | • Accuracy is limited by parameterization. May fail for systems/interactions not in its parameter set.<br>• Less reliable for vibrational frequencies than DFT. | • **Requires a large, high-quality, system-specific training dataset** (e.g., from thousands of DFT calculations).<br>• Creating this training set is a massive, time-consuming effort in itself.<br>• Not "predictive" for new chemical environments it wasn't trained on. |
-| **Use Case for Surface IR**| • **Final Accuracy:** Calculating the final, high-fidelity IR spectrum for publication.<br>• **Benchmark Data:** Generating the "ground truth" data needed to train an MLIP. | • **Pre-Optimization:** Finding a reasonable starting geometry for a full DFT calculation.<br>• **Qualitative Screening:** Quickly comparing trends across many different adsorbates or sites. | • **Large-Scale Dynamics:** Simulating temperature effects on the IR spectrum via MD.<br>• **Complex Systems:** Calculating spectra for very large surface models or nanoparticles where DFT is impossible.<br>• **Once Trained:** High-throughput prediction of spectra. |
-
+| **Underlying Principle** | Solves for electron density via quantum mechanics (approximate Schrödinger equation). | Approximate, semi-empirical version of DFT using pre-calculated parameters. | Empirical potential where a machine-learning model is trained on *ab initio* (e.g., DFT) data. |
+| **Typical Accuracy** | **High.** 'Gold standard' for chemical accuracy (with a good functional). | **Medium to Low.** Good for structures and qualitative trends; less reliable for energies. | **High to Very High.** *Reproduces the accuracy of its training data*. Entirely dependent on training set quality. |
+| **Computational Cost** | **Very High.** Scales poorly (e.g., $O(N^3)$), limiting system size and time. | **Fast.** Significantly (100-1000x+) faster than DFT; scales well. | **Very Fast.** Near-classical speed. Offers *DFT-level accuracy at high speed* (after training). |
+| **Primary Use Case** | • **Final Accuracy:** High-fidelity "publication-ready" spectra.<br>• **Benchmark Data:** Generating training data for MLIPs. | • **Pre-Optimization:** Finding a good starting geometry for DFT.<br>• **Qualitative Screening:** Quickly comparing trends. | • **Large-Scale Dynamics:** Simulating temperature effects (MD).<br>• **Complex Systems:** Handling systems too large for DFT. |
 
 ## C. IR spectrum plot and explanation (with axes labeled)
 
@@ -172,14 +168,13 @@ In this work, Researchers used DFTMD simulations to investigate a controversial 
 
 ## D. Uncertainty estimation on at least one spectral feature (e.g., ensemble or sensitivity test)
 
-Due to time limitiaon, I don't have results for this anlsysis.
-However, few concept could be implement to test:
+Due to time constraints, a formal uncertainty analysis for the spectral features was not performed. However, several methods are proposed for future work to quantify uncertainty and assess the robustness of the computational workflow:
 
-
-1. geometry differnce (initial roation of molecule, adsorption site difference)
-2. optimizater difference 
-3. change in DFTB parameters
-4. chaninge the promt.
+1. Geometric Sensitivity: Evaluating the impact of different initial geometric conditions, such as varying the initial molecular orientation or testing different adsorption sites.
+2. Optimizer Selection: Comparing the results obtained using different geometry optimization algorithms to ensure convergence and consistency.
+3. Parameter Sensitivity: Analyzing the effect of changes in key computational parameters (e.g., DFTB parameters or other method-specific settings).
+4. LLM Prompt Robustness: Testing the large language model's sensitivity to variations in the input prompt (e.g., using different phrasing to express the same intent) to ensure the agent's output is stable.
+5. Agent Workflow Validation: Assessing the impact of automated debugging and error-handling agents on the final results once fully implemented.
 
 
 
