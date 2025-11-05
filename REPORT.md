@@ -96,3 +96,92 @@ Plotting: This final, broadened spectrum is then plotted on a pre-existing matpl
 ![Example of pure molecule](results/H2O_on_Au_fcc_100_by_dftb+_ir.png)
 
 
+
+
+Based on normal water vibration model from below reference:
+1. https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Type=IR-SPEC&Index=1
+2. NIST https://www.wolframcloud.com/obj/d3e78290-0a16-49d4-a332-81218a0258a9?src=CloudBasicCopiedContent
+
+
+-------------------
+
+For water bulk in experiment:
+- Bending:  ~1600 cm-1 
+- Symmetric stretch: infrared active at ~3300 cm-1
+- Asymmetric strech: infrared active at ~3500 cm-1
+
+Although, the IR only show when vibration moide is as asymmetric, however, the hydrogen bonding between water molecule could make the vibration asymmetric, which contributions board peaks between 3200-3500 cm-1
+
+Based on Infrared and Raman Spectra of Inorganic and Coordination Compounds from Kazuo Nakamoto
+
+"The water molecule has three fundamental molecular vibrations. The O–H stretching vibrations give rise to absorption bands with band origins at 3657 cm−1 (ν1, 2.734 μm) and 3756 cm−1 (ν3, 2.662 μm) in the gas phase. The asymmetric stretching vibration, of B2 symmetry in the point group C2v is a normal vibration. The H–O–H bending mode origin is at 1595 cm−1 (ν2, 6.269 μm). Both symmetric stretching and bending vibrations have A1 symmetry, but the frequency difference between them is so large that mixing is effectively zero. In the gas phase all three bands show extensive rotational fine structure. "
+
+Other reference on vibrations analsysi of water molecules are listed as follows:
+- https://www.researchgate.net/publication/342313050_Laser_Absorption_Spectroscopy
+- https://gaussian.com/wp-content/uploads/dl/vib.pdf
+- https://en.wikipedia.org/wiki/Electromagnetic_absorption_by_water#:~:text=The%20three%20fundamental%20vibrations%20of,show%20extensive%20rotational%20fine%20structure.
+- https://onlinelibrary.wiley.com/doi/10.1002/0470027320.s4104
+
+
+However, when water attached to the surface, the vibration mode change differently, first, due to the decrease in degree of freedom, and the interaction different between water-water and water-metal, therefore the vibraion change accordingly. Although it cannot show in this current brief results. 
+
+-----
+
+ (Li, Jian-Feng, et al. "SERS and DFT study of water on metal cathodes of silver, gold and platinum nanoparticles." Physical Chemistry Chemical Physics 12.10 (2010): 2493-2502.)
+
+This study contain Raman and frequency calcualtion of water-Au/Pt cluster results list in Table 2 
+However, in this dftb level, it is difficult to compared with my result where peak shows at ~1400cm-1 and ~2600 cm -1, espeically in a vacumn enviroments.
+
+
+----
+(Groß, Axel, and Sung Sakong. "Ab initio simulations of water/metal interfaces." Chemical reviews 122.12 (2022): 10746-10776.)
+
+This ab initio methods review paper emphasizes the importance of theoretical method selection, noting that RPBE-D3 often outperforms PBE, which tends to create artificially strong, "icy" interactions. The paper details how liquid water forms a distinct, dynamic, layered structure at the metal interface, typically consisting of a "watA" layer of flat-lying, strongly-bound water (binding via oxygen) and a "watB" layer of more mobile, vertically-oriented molecules. The specific structure depends heavily on the surface: water forms hexagonal bilayers on surfaces like Pt(111), dissociates into a mixed H₂O/OH layer on reactive metals like Ru, and creates complex networks like pentagons or chains on non-hexagonal or stepped surfaces to optimize hydrogen bonding. 
+While the water-metal interaction is relatively weak, it has significant electronic effects, such as charge transfer from the water layer to the Pt(111) surface. Finally, simulations show this interface responds to applied potentials; for example, on Au(111), water molecules flip from a parallel to an "H-down" (hydrogen-pointing) orientation as the surface potential becomes more negative to stabilize the charge.
+
+
+----
+(Li, Jian-Feng, et al. "
+SERS and DFT study of water on metal cathodes of silver, gold and platinum nanoparticles." Physical Chemistry Chemical Physics 12.10 (2010): 2493-2502.)
+
+ Based on the combined SERS and DFT results, the authors proposed two distinct models for the interfacial water structure on these cathodes:
+
+- Model for Silver (Ag) and Gold (Au):
+
+- Water molecules bind directly to the negatively charged metal surface.
+
+- The binding occurs via an H-down configuration (O–H⋯M).
+
+This direct interaction explains the large Stark effect (the water molecule's O-H bond "feels" the electric field) and the enhanced bending mode intensity (a characteristic of H-down binding).
+
+- Model for Platinum (Pt):
+
+- The platinum surface is first covered by a full monolayer of adsorbed hydrogen (H-Pt), which was confirmed by the Pt–H SERS signal.
+
+- Water molecules adsorb onto this hydrogen layer, forming a dihydrogen bond (HO–H⋯H–Pt).
+
+- This "second-layer" adsorption screens the water from the electrode's electric field, explaining the very small Stark effect. The H-down nature of the dihydrogen bond still explains the enhanced bending mode intensity.
+
+----
+
+(Le, Jiabo, et al. "Theoretical insight into the vibrational spectra of metal–water interfaces from density functional theory based molecular dynamics." Physical Chemistry Chemical Physics 20.17 (2018): 11554-11558.)
+
+
+In this work, Researchers used DFTMD simulations to investigate a controversial "red-shifted" vibrational peak (around 3000 cm⁻¹, instead of 3400) observed at the Pt(111)-water interface. Their simulations successfully reproduced this peak on the Pt(111) surface (at ~3062 cm⁻¹) but not on the Au(111) surface, matching experimental findings and highlighting the importance of platinum's stronger water binding. The study pinpointed the peak's origin to watA molecules—those chemisorbed (bound via oxygen) directly to the platinum. This significant red-shift was attributed to a dual mechanism acting on these watA molecules: a combined effect of partial charge transfer to the platinum surface and the formation of exceptionally strong hydrogen bonds with adjacent water.
+
+
+## D. Uncertainty estimation on at least one spectral feature (e.g., ensemble or sensitivity test)
+
+Due to time limitiaon, I don't have results for this anlsysis.
+However, few concept could be implement to test:
+
+
+1. geometry differnce (initial roation of molecule, adsorption site difference)
+2. optimizater difference 
+3. change in DFTB parameters
+4. chaninge the promt.
+
+
+
+
+
