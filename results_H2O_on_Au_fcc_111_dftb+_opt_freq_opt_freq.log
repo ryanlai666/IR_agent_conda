@@ -1,0 +1,10 @@
+       Step     Time          Energy          fmax
+LBFGS:    0 15:37:07    -2224.696834        0.002230
+       Step     Time          Energy          fmax
+LBFGS:    0 15:39:57    -2224.696834        0.002230
+       Step     Time          Energy          fmax
+LBFGS:    0 16:10:28    -2224.702493        0.010940
+LBFGS:    1 16:10:50    -2224.702322        0.072628
+LBFGS:    2 16:11:10    -2224.702575        0.002309
+       Step     Time          Energy          fmax
+LBFGS:    0 16:17:08    -2224.702493        0.010940
