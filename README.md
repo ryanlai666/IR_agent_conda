@@ -216,8 +216,7 @@ However, most of packages listed are not easily accessible through conda install
 
 - **5. NWChem** Install via `micromamba`:
 
-
-**6. tblite**  (version contradict with stable DFTB+ version, so skipped for now)
+- **6. tblite**  (version contradict with stable DFTB+ version, so skipped for now)
 ## 
 
 
